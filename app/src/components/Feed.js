@@ -19,9 +19,7 @@ const Feed = () => {
         <div>
             {
                 campaigns.map((campaign) => (
-                    <div>
-                        campaign
-                    </div>
+                    <Campaign key={campaign.id} campaign={campaign} />
                 ))
             }
         </div>

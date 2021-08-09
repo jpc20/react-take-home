@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Campaign = () => {
+const Campaign = (campaign) => {
+    console.log(campaign)
     return (
         <div>
-            Campaign
+            {campaign.campaign.campaign_name}
         </div>
     )
 }
