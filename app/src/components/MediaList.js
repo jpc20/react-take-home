@@ -27,7 +27,6 @@ const MediaList = ({ medias }) => {
             <ImageList className={classes.gridList} cols={2.5}>
             {medias.map((media, i) => (
                 <MediaCard key={i} media={media} />
-
             ))}
             </ImageList>
         </div>

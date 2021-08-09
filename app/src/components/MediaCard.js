@@ -34,7 +34,7 @@ const MediaCard = ({ media }) => {
     const classes = useStyles();
 
     const downloadFile = (mediaUrl) => {
-            fetch(mediaUrl, {
+        fetch(mediaUrl, {
             method: 'GET',
             mode: 'no-cors',
             headers: {
