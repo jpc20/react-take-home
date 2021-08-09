@@ -38,7 +38,7 @@ const MediaCard = ({ media }) => {
             method: 'GET',
             mode: 'no-cors',
             headers: {
-                'Content-Type': 'video/mp4',
+                'Content-Type': `${media.media_type === "video" ? "video/mp4" : "image/png"}`,
             },
         })
         .then((response) => response.blob())
@@ -50,7 +50,7 @@ const MediaCard = ({ media }) => {
             link.href = url;
             link.setAttribute(
             'download',
-            `${mediaUrl}.mp4`,
+            `${media.media_type === "video" ? mediaUrl + ".mp4" : mediaUrl + ".png"}`,
             );
             document.body.appendChild(link);
             link.click();
