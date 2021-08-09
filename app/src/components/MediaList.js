@@ -1,10 +1,12 @@
 import React from 'react'
+import MediaCard from './MediaCard';
 
 const MediaList = ({ medias }) => {
-    console.log(medias)
     return (
         <div>
-            MediaList
+            {medias.map((media, i) => (
+                <MediaCard key={i} media={media} />
+            ))}
         </div>
     )
 }
