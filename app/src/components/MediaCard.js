@@ -10,6 +10,7 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import LinkIcon from '@material-ui/icons/Link';
 import GetAppIcon from '@material-ui/icons/GetApp';
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 
 const useStyles = makeStyles({
   root: {
@@ -22,6 +23,11 @@ const useStyles = makeStyles({
     height: "12rem",
     borderRadius: "0.5rem"
   },
+  playArrow: {
+    transform: "translateY(-110px)",
+    color: "white",
+    fontSize: "xxx-large",
+  }
 });
 
 const MediaCard = ({ media }) => {
@@ -61,6 +67,7 @@ const MediaCard = ({ media }) => {
                         image={media.cover_photo_url}
                         title="cover photo"
                     />
+                    {media.media_type === "video" && <PlayArrowIcon className={classes.playArrow} />}
                 </CardActionArea>
                 <CardActions>
                     <IconButton aria-label="link" onClick={() => navigator.clipboard.writeText(media.tracking_link)}>
